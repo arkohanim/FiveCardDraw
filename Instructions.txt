@@ -1,0 +1,6 @@
+Move to directory
+Clone to directory
+git status to see what is new/ changed
+add a folder (git add src) or a file(git add readMe.md) to modify it
+commit: git commit -m "Message to tell us what is new"
+push: git push
