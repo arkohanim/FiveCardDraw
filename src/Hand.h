@@ -18,6 +18,10 @@
 #include "card.h"
 using namespace std;
 
+/**
+ * changed some stuff 16:57
+ */
+
 class Hand { // will be a pair
 
 public:
