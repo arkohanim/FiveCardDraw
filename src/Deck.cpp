@@ -37,7 +37,6 @@ void Deck::buildDeck() {
 	for (int i = 0; i < 4; i++) {
 		for (int j = 0; j < 13; j++) {
 			deck.push_back(Card(make_pair(i,j)));
-
 		}
 	}
 

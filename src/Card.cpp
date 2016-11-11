@@ -22,5 +22,6 @@ Card::Card(pair<int, int> singleCard) {
 	Suit = singleCard.first;
 	Value = singleCard.second;
 
+
 }
 
