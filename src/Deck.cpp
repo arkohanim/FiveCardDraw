@@ -25,6 +25,12 @@ Deck::Deck(int NCards, string deckType) {
 	printDeck();
 }
 
+void Deck::shuffleDeck(Deck deck) {
+	srand(time(0));
+	auto engine = std::default_random_engine(time(0));
+	std::shuffle(std::begin(deck), std::end(deck), engine); // shuffle the deck
+}
+
 void Deck::buildDeck() {
 	deck.clear();
 	for (int i = 0; i < 4; i++) {
@@ -34,9 +40,7 @@ void Deck::buildDeck() {
 		}
 	}
 
-	srand(time(0));
-	auto engine = std::default_random_engine(time(0));
-	std::shuffle(std::begin(deck), std::end(deck), engine); // shuffle the deck
+
 }
 
 void Deck::printDeck(){

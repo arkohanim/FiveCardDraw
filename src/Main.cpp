@@ -46,8 +46,6 @@ enum HandRank{
 	StraightFlush,
 	RoyalFLush
 
-
-
 };
 
 int main(){
