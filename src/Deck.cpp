@@ -31,10 +31,6 @@ void Deck::buildDeck() {
 		for (int j = 0; j < 13; j++) {
 			deck.push_back(Card(make_pair(i,j)));
 
-//			potato.Suit = j;
-//			potato.Value = i;
-//			deck.push_back(potato);
-
 		}
 	}
 
