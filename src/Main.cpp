@@ -52,6 +52,6 @@ enum HandRank{
 
 int main(){
 	Deck deck(52, "");
-
+	cout <<"committing"<<endl;
 	return EXIT_SUCCESS;
 }
