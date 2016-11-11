@@ -17,6 +17,7 @@
 #include <vector>
 #include "card.h"
 #include "deck.h"
+#include "hand.h"
 using namespace std;
 class Player {
 private:

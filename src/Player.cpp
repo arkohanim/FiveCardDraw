@@ -17,7 +17,15 @@
 #include <string>
 #include <utility>
 
-#include <"Player.h">
+#include "player.h"
+
+
+using namespace std;
+
+Player::Player(string name){
+	this->won = false;
+
+}
 
 
 

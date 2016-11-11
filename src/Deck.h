@@ -14,7 +14,7 @@ private:
 	vector<Card> deck;
 	void buildDeck();
 	void printDeck();
-	void shuffleDeck();
+	void shuffleDeck(vector<Card> deck);
 public:
 	Deck(int NCards, string deckType);
 
