@@ -15,7 +15,7 @@
 #include <string>
 #include <utility>
 #include <vector>
-#include "card.h"
+#include "card.h" // other stuff
 using namespace std;
 
 /**
