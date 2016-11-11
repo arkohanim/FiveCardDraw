@@ -4,6 +4,9 @@
  *  Created on: Nov 9, 2016
  *      Author: arkohanim
  */
+#ifndef DECK_H_
+#define HAND_H_
+
 #include "card.h"
 using namespace std;
 
@@ -41,3 +44,4 @@ public:
 
 };
 
+#endif

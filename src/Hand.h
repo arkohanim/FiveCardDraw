@@ -5,6 +5,9 @@
  *      Author: arkohanim
  */
 
+#ifndef DECK_H_
+#define DECK_H_
+
 #include <algorithm>
 #include <cctype>
 #include <cstdlib>
@@ -54,3 +57,5 @@ private:
 	};
 
 };
+
+#endif

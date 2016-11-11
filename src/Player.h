@@ -5,6 +5,9 @@
  *      Author: arkohanim
  */
 
+#ifndef PLAYER_H_
+#define PLAYER_H_
+
 #include <algorithm>
 #include <cctype>
 #include <cstdlib>
@@ -54,3 +57,4 @@ public:
 
 };
 
+#endif

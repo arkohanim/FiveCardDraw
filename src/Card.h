@@ -4,6 +4,9 @@
  *  Created on: Nov 9, 2016
  *      Author: arkohanim
  */
+#ifndef CARD_H_
+#define CARD_H_
+
 #include <algorithm>
 #include <cctype>
 #include <cstdlib>
@@ -19,7 +22,7 @@ using namespace std;
 class Card { // will be a pair
 
 public:
-	Card(pair<int, int>);
+	Card(std::pair<int ,int>);
 
 	int Suit;
 	int Value;
@@ -48,3 +51,4 @@ private:
 
 };
 
+#endif

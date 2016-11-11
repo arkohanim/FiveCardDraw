@@ -17,7 +17,7 @@
 #include <string>
 #include <utility>
 
-<<<<<<< HEAD
+
 #include "player.h"
 
 
@@ -27,9 +27,7 @@ Player::Player(string name){
 	this->won = false;
 
 }
-=======
-#include "Player.h"
->>>>>>> branch 'master' of https://github.com/arkohanim/FiveCardDraw.git
+
 
 
 
