@@ -26,11 +26,12 @@ class Hand { // will be a pair
 
 public:
 	Hand(int HandRank, vector<Card> hand);
+	Hand();
+
+private:
 
 	int HandRank; // what you have, stored in main right now
 	vector<Card> hand; // any hand
-private:
-
 	enum Suits {
 		CLUBS, DIAMONDS, HEARTS, SPADES
 	};
