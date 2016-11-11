@@ -6,5 +6,10 @@
  */
 
 
-
+/**
+ * have a playing deck
+ * have a discard deck
+ *
+ *
+ */
 
