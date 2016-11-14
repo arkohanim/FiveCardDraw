@@ -18,6 +18,7 @@
 #include <string>
 #include <utility>
 #include <vector>
+#include <map>
 #include "card.h"
 using namespace std;
 
@@ -31,9 +32,16 @@ public:
 	Hand(int HandRank, vector<Card> hand);
 	Hand();
 
+	map<int,int> countMatches();
+	vector<int> matches;
+	vector <int> countMatchesVector();
+	bool has1pair();
+	bool has2pairs();
+	int getMaxMatches();
+
 private:
 
-	int PlayerHandRank; // what you have, stored in main right now
+	int HandRank; // what you have, stored in main right now
 	vector<Card> hand; // any hand
 	enum Suits {
 		CLUBS, DIAMONDS, HEARTS, SPADES
