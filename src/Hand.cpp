@@ -24,6 +24,7 @@ Hand::Hand(){
 }
 
 
+
 Hand::Hand(int HandRank, vector<Card> hand) {
 
 	this->HandRank = HandRank;
@@ -31,3 +32,15 @@ Hand::Hand(int HandRank, vector<Card> hand) {
 
 }
 
+//could possibly done with a vector or other data type
+//keys are card values, mapped with how many times they occur in the hand
+map<int,int> Hand::countMatches(){
+	//vector <int> count;
+	map <int,int> matches;
+	for(unsigned int i = 0; i < hand.size(); i++){
+		//count[i]++;
+		int cardRank = hand[i].Value;
+		matches[cardRank]++;
+	}
+	return matches;
+}
