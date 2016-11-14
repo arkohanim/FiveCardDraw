@@ -91,11 +91,7 @@ there is a run time error that needs to be fixed, but the function will do the f
 bool Hand::has2pairs(){
 	if(has1pair()){
 		vector <int> matches = countMatchesVector();
-		//remove the pair:
-		matches.erase( std::remove(matches.begin(), matches.end(), 2) , matches.end() );
-		//if another pair is found, then there were two pairs:
-		if(std::find(matches.begin(), matches.end(), 2) != matches.end())
-			return true;
+
 	}
 	return false;
 }
