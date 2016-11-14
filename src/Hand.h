@@ -33,11 +33,14 @@ public:
 	Hand();
 
 	map<int,int> countMatches();
+	map<int,int> matchHolder; // holds matches, nicrease when same is found -> matchHolder[Facevalue]++ <-
+	vector<Card> workingHand;
 	vector<int> matches;
 	vector <int> countMatchesVector();
 	bool has1pair();
 	bool has2pairs();
 	int getMaxMatches();
+	int getMaxMatchesFromMap();
 
 private:
 

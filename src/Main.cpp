@@ -10,6 +10,7 @@
 #include <utility>
 #include <vector>
 #include "Deck.h"
+#include "hand.h"
 
 using namespace std;
 enum Suits {
@@ -49,8 +50,14 @@ enum HandRank{
 };
 
 int main(){
-	Deck deck(52, "");
-	cout <<"committing"<<endl;
-	cout << "committing again"<<endl;
+	//Deck deck(52, "");
+	Hand hand;
+	//hand.countMatches();
+	cout << "DISPLAYING THE MAX:" << endl;
+	int max = hand.getMaxMatchesFromMap();
+	cout << max <<endl;
+
+	//cout <<"committing"<<endl;
+	//cout << "committing again"<<endl;
 	return EXIT_SUCCESS;
 }

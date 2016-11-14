@@ -26,14 +26,13 @@ Hand::Hand(){
 	
 	//The follow is just for testing and will be replaced by dealing from the deck
 	for (int i=0; i<2;i++){
-		hand.push_back(Card(make_pair(1,1)));
+		hand.push_back(Card(make_pair(8,1)));
 	}
 	for (int i=0; i<2;i++){
-		hand.push_back(Card(make_pair(2,2)));
+		hand.push_back(Card(make_pair(12,2)));
 	}
+
 }
-
-
 
 Hand::Hand(int HandRank, vector<Card> hand) {
 
@@ -49,10 +48,17 @@ Hand::Hand(int HandRank, vector<Card> hand) {
 map<int,int> Hand::countMatches(){
 	//vector <int> count;
 	map <int,int> matches;
-	for(unsigned int i = 0; i < hand.size(); i++){
+	for(size_t i = 0; i < hand.size(); i++){
 		//count[i]++;
 		int cardRank = hand[i].Value;
 		matches[cardRank]++;
+
+	}
+	cout << matches.size() << endl;
+	for(size_t j = 0; j < matches.size(); j++){
+		cout << "\n"<<matches[j] << " \n";
+
+
 	}
 	return matches;
 }
@@ -75,6 +81,17 @@ int Hand::getMaxMatches(){
 	return max;
 }
 
+int Hand::getMaxMatchesFromMap(){
+	int max = 0;
+	for(size_t i = 0; i < matches.size(); i++){
+		int n = matches[i];
+		cout << n;
+		if ( n > max)
+			max = n;
+	}
+	return max;
+}
+
 bool Hand::has1pair(){
 	if (getMaxMatches() >= 2 )
 		return true;
@@ -91,11 +108,7 @@ there is a run time error that needs to be fixed, but the function will do the f
 bool Hand::has2pairs(){
 	if(has1pair()){
 		vector <int> matches = countMatchesVector();
-		//remove the pair:
-		matches.erase( std::remove(matches.begin(), matches.end(), 2) , matches.end() );
-		//if another pair is found, then there were two pairs:
-		if(std::find(matches.begin(), matches.end(), 2) != matches.end())
-			return true;
+
 	}
 	return false;
 }
