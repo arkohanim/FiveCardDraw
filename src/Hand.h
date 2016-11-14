@@ -31,6 +31,10 @@ public:
 	Hand(int HandRank, vector<Card> hand);
 	Hand();
 	map<int,int> countMatches();
+	vector <int> countMatchesVector();
+	bool has1pair();
+	bool has2pairs();
+	int getMaxMatches();
 
 private:
 
