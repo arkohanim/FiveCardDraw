@@ -84,12 +84,18 @@ int Hand::getMaxMatches(){
 int Hand::getMaxMatchesFromMap(){
 	cout << "INSIDE getMaxMatches" << endl;
 	int max = 0;
-	for(size_t i = 0; i < matches.size(); i++){
-		int n = matches[i];
-		cout << n;
-		if ( n > max)
-			max = n;
+
+	map<int,int>::iterator it;
+	for (it = matchHolder.begin(); it != matchHolder.end() ; it++){
+		int occurences = it->second ;
+		if (max < occurences)
+			max = occurences;
 	}
+//	for(size_t i = 0; i < matches.size(); i++){
+//		int n = matches[i];
+//		if ( n > max)
+//			max = n;
+//	}
 	return max;
 }
 
