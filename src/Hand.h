@@ -30,6 +30,7 @@ class Hand { // will be a pair
 public:
 	Hand(int HandRank, vector<Card> hand);
 	Hand();
+	map<int,int> countMatches();
 
 private:
 
