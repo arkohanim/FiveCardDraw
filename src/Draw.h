@@ -1,12 +1,22 @@
 /*
- * Hand.h
+ * Draw.h
  *
- *  Created on: Nov 10, 2016
+ *  Created on: Nov 14, 2016
  *      Author: arkohanim
  */
+/**
+ * Specific to Five card draw, rules go here
+ * hand rank determination goes here
+ * User determining to throw away cards and get new ones goes here
+ * Look for other things
+ * Determine Number of Players in Game class
+ *
+ *
+ */
 
-#ifndef DECK_H_
-#define DECK_H_
+
+#ifndef DRAW_H_
+#define DRAW_H_
 
 #include <algorithm>
 #include <cctype>
@@ -19,22 +29,23 @@
 #include <utility>
 #include <vector>
 #include "card.h"
+#include "deck.h"
+#include "hand.h"
+#include "player.h"
 using namespace std;
-
-/**
- * changed some stuff 16:57
- */
-
-class Hand { // will be a pair
-
-public:
-	Hand(int HandRank, vector<Card> hand);
-	Hand();
-
+class Draw {
 private:
+	vector<Player> players;
+	//string name;
+	//bool won;
 
-	int PlayerHandRank; // what you have, stored in main right now
-	vector<Card> hand; // any hand
+	vector<Card> PlayingDeck;
+	void determinHandRank(Hand hand);
+	void discard(int nCard);
+	void setUp();
+public:
+	Draw(vector<Player> players);
+
 	enum Suits {
 		CLUBS, DIAMONDS, HEARTS, SPADES
 	};
@@ -73,3 +84,6 @@ private:
 };
 
 #endif
+
+
+

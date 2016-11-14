@@ -1,5 +1,6 @@
 /*
  * Hand.cpp
+ * put the Hand Rank enum in the Hand header
  *
  *  Created on: Nov 9, 2016
  *      Author: arkohanim
@@ -20,13 +21,13 @@ using namespace std;
 
 
 Hand::Hand(){
-	this->HandRank = 0;
+	this->PlayerHandRank = 0;
 }
 
 
 Hand::Hand(int HandRank, vector<Card> hand) {
 
-	this->HandRank = HandRank;
+	this->PlayerHandRank = HandRank;
 	this->hand = hand;
 
 }
