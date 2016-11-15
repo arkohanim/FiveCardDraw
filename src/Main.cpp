@@ -55,6 +55,10 @@ int main(){
 	//hand.countMatches();
 	int max = hand.getMaxMatchesFromMap();
 	cout << max <<endl;
+	if(hand.has2pairs()){
+		cout << "working" << endl;
+	}
+	//cout << hand.has2pairs() << endl;
 
 	//cout <<"committing"<<endl;
 	//cout << "committing again"<<endl;

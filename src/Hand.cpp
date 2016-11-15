@@ -117,13 +117,14 @@ bool Hand::has2pairs(){
 //	}
 	int numMatches = 0;
 	for(size_t i = 0; i < matches.size(); i++){
-
-
+		if(matches[i] == 2){
+			numMatches++;
+		}
 
 	}
 
 
-	return false;
+	return numMatches == 2;
 }
 /**
  * for full house remove a three of a kind then see if remainder is a pair
