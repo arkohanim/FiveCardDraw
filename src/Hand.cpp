@@ -55,9 +55,9 @@ map<int,int> Hand::countMatches(){
 
 	}
 	//cout << matches.size() << endl;
-	for(size_t j = 0; j < matches.size(); j++){
-		//cout << "\n"<<matches[j] << " \n";
-	}
+//	for(size_t j = 0; j < matches.size(); j++){
+//		//cout << "\n"<<matches[j] << " \n";
+//	}
 	return matches;
 }
 
@@ -98,7 +98,7 @@ int Hand::getMaxMatchesFromMap(){
 }
 
 bool Hand::has1pair(){
-	if (getMaxMatches() >= 2 )
+	if (getMaxMatchesFromMap() >= 2 )
 		return true;
 	return false;
 }
@@ -111,10 +111,21 @@ there is a run time error that needs to be fixed, but the function will do the f
 			return true
 */
 bool Hand::has2pairs(){
-	if(has1pair()){
-		vector <int> matches = countMatchesVector();
+//	if(has1pair()){
+//		vector <int> matches = countMatchesVector();
+//
+//	}
+	int numMatches = 0;
+	for(size_t i = 0; i < matches.size(); i++){
+
+
 
 	}
+
+
 	return false;
 }
+/**
+ * for full house remove a three of a kind then see if remainder is a pair
+ */
 
