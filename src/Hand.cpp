@@ -54,11 +54,9 @@ map<int,int> Hand::countMatches(){
 		matches[cardRank]++;
 
 	}
-	cout << matches.size() << endl;
+	//cout << matches.size() << endl;
 	for(size_t j = 0; j < matches.size(); j++){
-		cout << "\n"<<matches[j] << " \n";
-
-
+		//cout << "\n"<<matches[j] << " \n";
 	}
 	return matches;
 }
@@ -84,7 +82,7 @@ int Hand::getMaxMatches(){
 int Hand::getMaxMatchesFromMap(){
 	cout << "INSIDE getMaxMatches" << endl;
 	int max = 0;
-
+	matchHolder = countMatches();
 	map<int,int>::iterator it;
 	for (it = matchHolder.begin(); it != matchHolder.end() ; it++){
 		int occurences = it->second ;

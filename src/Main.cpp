@@ -53,8 +53,6 @@ int main(){
 	//Deck deck(52, "");
 	Hand hand;
 	//hand.countMatches();
-	cout << hand.getMaxMatchesFromMap();
-	cout << "DISPLAYING THE MAX:" << endl;
 	int max = hand.getMaxMatchesFromMap();
 	cout << max <<endl;
 
